@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Deletion Request - DonDuSangTN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #d32f2f;
+            text-align: center;
+            border-bottom: 3px solid #d32f2f;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #d32f2f;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #666;
+        }
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background-color: #d32f2f;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #b71c1c;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .info {
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-link a {
+            color: #d32f2f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Account & Data Deletion Request</h1>
+        
+        <div class="info">
+            <strong>Your Right to Data Deletion:</strong> As a DonDuSangTN user, you have the right to request deletion of your account and all associated personal data. This request will be processed within 30 days.
+        </div>
+
+        <h2>What Will Be Deleted</h2>
+        <p>When you request account deletion, the following data will be permanently removed:</p>
+        <ul>
+            <li><strong>Profile Information:</strong> Name, email, phone number, profile picture</li>
+            <li><strong>Account Data:</strong> Login credentials and authentication tokens</li>
+            <li><strong>Donation History:</strong> All your blood donation requests and related activity</li>
+            <li><strong>Messages:</strong> All messages sent or received through the app</li>
+            <li><strong>Location Data:</strong> Any stored location preferences or history</li>
+            <li><strong>Device Information:</strong> Push notification tokens and device identifiers</li>
+            <li><strong>App Activity:</strong> Usage analytics and interaction data</li>
+        </ul>
+
+        <div class="warning">
+            <strong>⚠️ Important:</strong> This action is permanent and cannot be undone. You will lose access to:
+            <ul>
+                <li>Your donor profile and donation history</li>
+                <li>All saved preferences and settings</li>
+                <li>Connection with other users in the blood donation network</li>
+                <li>Any ongoing donation requests or communications</li>
+            </ul>
+        </div>
+
+        <h2>Request Account Deletion</h2>
+        
+        <div class="form-container">
+            <form id="deletionForm" action="mailto:privacy@dondusangtn.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="email">Your Email Address (associated with DonDuSangTN account) *</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your registered email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="userId">User ID or Phone Number (if known)</label>
+                    <input type="text" id="userId" name="userId" placeholder="Optional: Your user ID or registered phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Reason for Account Deletion *</label>
+                    <select id="reason" name="reason" required>
+                        <option value="">Select a reason</option>
+                        <option value="no-longer-needed">No longer need the service</option>
+                        <option value="privacy-concerns">Privacy concerns</option>
+                        <option value="found-alternative">Found alternative solution</option>
+                        <option value="technical-issues">Technical issues with the app</option>
+                        <option value="other">Other (please specify below)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalInfo">Additional Information</label>
+                    <textarea id="additionalInfo" name="additionalInfo" placeholder="Optional: Any additional details or specific deletion requests"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="confirmDeletion" required style="width: auto; margin-right: 10px;">
+                        I understand that this action is permanent and cannot be undone. I confirm that I want to delete my DonDuSangTN account and all associated data.
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Deletion Request</button>
+            </form>
+        </div>
+
+        <h2>Alternative Contact Methods</h2>
+        <div class="contact-info">
+            <p><strong>If the form above doesn't work, you can also contact us directly:</strong></p>
+            <p><strong>Email:</strong> <a href="mailto:privacy@dondusangtn.com">privacy@dondusangtn.com</a></p>
+            <p><strong>Subject Line:</strong> "Account Deletion Request - [Your Email]"</p>
+            <p><strong>Required Information:</strong></p>
+            <ul>
+                <li>Your registered email address</li>
+                <li>Your phone number (if different from email)</li>
+                <li>Reason for deletion request</li>
+                <li>Confirmation that you understand the action is permanent</li>
+            </ul>
+        </div>
+
+        <h2>Processing Timeline</h2>
+        <div class="info">
+            <p><strong>Response Time:</strong> We will confirm receipt of your request within 48 hours</p>
+            <p><strong>Processing Time:</strong> Account deletion will be completed within 30 days</p>
+            <p><strong>Verification:</strong> We may contact you to verify your identity before processing</p>
+            <p><strong>Confirmation:</strong> You will receive final confirmation once deletion is complete</p>
+        </div>
+
+        <h2>Data Retention Policy</h2>
+        <p>Please note that some data may be retained for legal or regulatory purposes:</p>
+        <ul>
+            <li><strong>Legal Compliance:</strong> Certain records may be kept as required by Tunisian law</li>
+            <li><strong>Safety & Security:</strong> Basic logs for security purposes (without personal identifiers)</li>
+            <li><strong>Anonymized Data:</strong> Aggregated, non-identifiable analytics may be retained</li>
+        </ul>
+
+        <h2>Before You Delete</h2>
+        <p>Consider these alternatives:</p>
+        <ul>
+            <li><strong>Temporary Deactivation:</strong> Contact us about temporarily disabling your account instead</li>
+            <li><strong>Privacy Settings:</strong> Adjust your privacy settings to limit data collection</li>
+            <li><strong>Support:</strong> Contact our support team if you're having technical issues</li>
+        </ul>
+
+        <div class="back-link">
+            <a href="privacy-policy.html">← Back to Privacy Policy</a> | 
+            <a href="index.html">← Back to Main Page</a>
+        </div>
+
+        <p style="text-align: center; margin-top: 40px; color: #666; font-size: 14px;">
+            © 2025 DonDuSangTN. Your privacy rights are important to us.
+        </p>
+    </div>
+
+    <script>
+        // Simple form enhancement
+        document.getElementById('deletionForm').addEventListener('submit', function(e) {
+            const email = document.getElementById('email').value;
+            const reason = document.getElementById('reason').value;
+            const userId = document.getElementById('userId').value;
+            const additionalInfo = document.getElementById('additionalInfo').value;
+            const confirmed = document.getElementById('confirmDeletion').checked;
+
+            if (!confirmed) {
+                e.preventDefault();
+                alert('Please confirm that you understand this action is permanent.');
+                return;
+            }
+
+            // Construct email body
+            const emailBody = `Account Deletion Request for DonDuSangTN
+
+Email: ${email}
+User ID/Phone: ${userId || 'Not provided'}
+Reason: ${reason}
+Additional Information: ${additionalInfo || 'None'}
+
+I confirm that I understand this action is permanent and cannot be undone. I want to delete my DonDuSangTN account and all associated data.
+
+Date of Request: ${new Date().toISOString().split('T')[0]}`;
+
+            // Update the form action with the email body
+            this.action = `mailto:privacy@dondusangtn.com?subject=Account Deletion Request - ${email}&body=${encodeURIComponent(emailBody)}`;
+        });
+    </script>
+</body>
+</html>
